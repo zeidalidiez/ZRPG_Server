@@ -33,13 +33,7 @@ app.use((error, req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  knexInstance.from('readnext').select('*')
-   .then(result => {
-     console.log(result)
-   })
-  res.send()
-
-
+     res.send('Hello, world!')
    });
 
    

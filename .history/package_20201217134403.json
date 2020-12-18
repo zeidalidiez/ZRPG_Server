@@ -11,8 +11,8 @@
     "deploy": "git push heroku main"
   },
   "engines": {
-    "node": "14.15.1"
-  },
+       "node": "14.15.1"
+     },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zeidalidiez/ZRPG_Server.git"
@@ -28,9 +28,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.2.0",
-    "knex": "^0.21.14",
-    "morgan": "^1.10.0",
-    "pg": "^8.5.1"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

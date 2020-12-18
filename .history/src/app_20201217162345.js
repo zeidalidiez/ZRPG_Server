@@ -33,11 +33,10 @@ app.use((error, req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  knexInstance.from('readnext').select('*')
-   .then(result => {
-     console.log(result)
-   })
-  res.send()
+  let bobbyhill = knexInstance('readnext').select('*').toQuery   
+  res.send(bobbyhill)
+
+     
 
 
    });
