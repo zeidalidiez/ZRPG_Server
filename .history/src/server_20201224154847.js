@@ -7,8 +7,6 @@ const db = knex({
   connection: DATABASE_URL,
 });
 });
-});
-});
 
 app.set('db', db);
 
