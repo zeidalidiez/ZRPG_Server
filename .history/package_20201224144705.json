@@ -1,0 +1,45 @@
+{
+  "name": "zrpg_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --require test/setup.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate"
+  },
+  "engines": {
+    "node": "14.15.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeidalidiez/ZRPG_Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeidalidiez/ZRPG_Server/issues"
+  },
+  "homepage": "https://github.com/zeidalidiez/ZRPG_Server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "knex": "^0.21.14",
+    "morgan": "^1.10.0",
+    "pg": "8.0.3",
+    "postgrator-cli": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
+  }
+}
