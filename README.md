@@ -1,21 +1,50 @@
-Backend for ReadNext - an app to assist in tracking what you want to read next. 
+# READNEXT-SERVER
 
-Set up to work with heroku environment variables. 
+This is the backend server for READNEXT client: frontend @ 
+https://github.com/zeidalidiez/ZRPG_Frontend
 
-Instructions: 
+Live demo of app hosted on vercel:
+https://readnext.vercel.app/
 
-* Copy example .env or create .env with the following values 
+Live version of server hosted on heroku 
+https://cryptic-sea-32900.herokuapp.com
 
-* [ENV](https://i.imgur.com/FZfxatr.png)
+# Core Technologies
 
-* Deploy to heroku or equivalent.
+    Node.js
+    PostgresSQL
+    express.js
+    JWT
+    XSS
 
-Query /books to receive json element with the contents of database (equivalent to select * from readnext)
+# Services
 
-GET/POST to /books/ to fetch or submit a new title from the database
-
-DELETE to /books/:id to delete a title from the database
+    /books: GET, POST, DELETE
 
 
+# Local/Development Set-up
 
-Utilize react frontend to interface (https://github.com/zeidalidiez/ZRPG_Frontend/tree/master/zrpg)
+    Requirements: Node.js, npm, postgresql, enzyme
+
+1. Clone this repo
+2. Set up database table as habitually:
+
+$ createdb [connection-option...][option...] readnext
+
+3. Set up .env
+        Must Include:
+        NODE_ENV
+        PORT
+        MIGRATION_DB_HOST
+        MIGRATION_DB_PORT
+        MIGRATION_DB_NAME
+        MIGRATION_DB_USER
+        
+4. Install node_modules and migrate:
+
+.../readnext-server $ npm install
+.../readnext-server $ npm run migrate
+
+5. Seed database with sample data
+
+.../readnext-server $ psql -d readnext -f ./seeds/seed.readnext_tables.sql
