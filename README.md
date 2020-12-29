@@ -47,4 +47,4 @@ $ createdb [connection-option...][option...] readnext
 
 5. Seed database with sample data
 
-.../readnext-server $ psql -d readnext -f ./seeds/seed.readnext_tables.sql
+.../readnext-server $ psql -d readnext -f ./migrations/001.do.create_readnext.sql
