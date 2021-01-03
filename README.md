@@ -31,7 +31,7 @@ https://cryptic-sea-32900.herokuapp.com
 
 $ createdb [connection-option...][option...] readnext
 
-3. Set up .env
+3. Set up .env 
         Must Include:
         NODE_ENV
         PORT
